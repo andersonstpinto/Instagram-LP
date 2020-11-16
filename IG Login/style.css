@@ -18,24 +18,34 @@ body {
 }
 
 .instagram-wrapper {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 876;
-    height: 833;
+    width: 876px;
+    height: 833px;
+    padding: 50px;
 }
 
-.instagram-phone {
+.instagram-left {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
 
-.instagram-phone img {
-    height: 45rem;
+.instagram-phone {
+    position: absolute;
+    height: 43rem;
+    z-index: 1;
 }
 
+.photo1 {
+    position: relative;
+    top: 3px;
+    left: 43px;
+    z-index: 2;
+}
 .instagram-continue {
     display: flex;
     align-items: center;
@@ -132,14 +142,26 @@ body {
     @media (max-width :875px) {
         .instagram-wrapper {
             width: 380px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .instagram-phone {
             display: none;
+            z-index: 1;
+        }
+
+        .photo1 {
+            display: none;
+            z-index: 2;
         }
 
         .instagram-continue {
-            width: 380px;
+            width: 100%;
+            position:absolute;
+            z-index: 3;
         }
 
     }
